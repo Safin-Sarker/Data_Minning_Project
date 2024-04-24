@@ -38,7 +38,7 @@ def predict_check_worthiness(file):
         
         
         # Append the tweet and predicted class label to the predictions list
-        predictions.append({'tweet_id': row['tweet_id'], 'class_label': row['class_label'], 'predicted_label': predicted_label})
+        predictions.append({'tweet_id': row['tweet_id'], 'class_label': predicted_label})
 
     # Convert the predictions list into a DataFrame
     predictions_df = pd.DataFrame(predictions)
@@ -55,4 +55,3 @@ def predict_check_worthiness(file):
 predict_check_worthiness("../data/processed_data/CT24_checkworthy_english/CT24_checkworthy_english_dev-test_preprocessed.csv")
 predict_check_worthiness("../data/processed_data/CT24_checkworthy_dutch/CT24_checkworthy_dutch_dev-test_preprocessed.csv")
 predict_check_worthiness("../data/processed_data/CT24_checkworthy_arabic/CT24_checkworthy_arabic_dev-test_preprocessed.csv")
-#predict_check_worthiness("../data/processed_data/CT24_checkworthy_spanish/CT24_checkworthy_spanish_dev-test_preprocessed.csv")
